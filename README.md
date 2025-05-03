@@ -1,24 +1,27 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Rails 8 Project:
+## Authentication with Devise & Authorization with Pundit
 
-Things you may want to cover:
+This project features robust user authentication powered by Devise, a comprehensive and customizable solution for managing user sessions in Rails. Devise handles essential functionalities such as sign-up, login, logout, password recovery, and session management seamlessly.
 
-* Ruby version
+For fine-grained access control, Pundit is used to implement role-based authorization. It provides a clean and scalable policy-based structure to restrict actions like viewing, editing, or deleting resources based on roles such as Super Admin and Staff User.
 
-* System dependencies
+Together, Devise and Pundit ensure the application is both securely authenticated and properly authorized, providing a solid foundation for managing user access.
 
-* Configuration
+This project is a complete implementation based on the Udemy course:
+“Learn Rails 7, ActiveRecord ORM, ActiveJob, Turbo, Stimulus, APIs, Authentication, Authorization – From Scratch Step by Step” by Kameswara Sarma Uppuluri.
 
-* Database creation
+## Acknowledgements
 
-* Database initialization
+ - [Kameswara Sarma Uppuluri](https://sefinro.udemy.com/user/ksarma/)
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## Authors
 
-* Deployment instructions
+- [@jaythree](https://www.linkedin.com/in/giljrx/)
 
-* ...
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
