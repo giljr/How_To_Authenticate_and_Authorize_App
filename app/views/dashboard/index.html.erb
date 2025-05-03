@@ -1,0 +1,19 @@
+<div class="container mt-4">
+  <div class="d-flex flex-wrap gap-2">
+    <% if admin_signed_in? && current_admin.super_admin? %>
+      <%= link_to "Roles", roles_path, class: 'btn btn-primary' %>
+      <%= link_to "Staff Users", staff_users_path, class: 'btn btn-primary' %>
+      <%= link_to "Unlock Accounts", lock_accounts_path, class: 'btn btn-primary' %>
+    <% end %>
+
+    <% if admin_signed_in? && current_admin.staff_user? %>
+      <%= link_to "Products", products_path, class: 'btn btn-primary' %>
+    <% end %>
+
+    <% if admin_signed_in? && !current_admin.super_admin? %>
+      <%= link_to "Update Password", edit_admin_registration_path, class: 'btn btn-primary' %>
+      <%= link_to "Delete Account", confirm_account_deletion_path, class: 'btn btn-primary' %>
+      <%= link_to "Update Profile", edit_customer_path, class: 'btn btn-primary' %>
+    <% end %>
+  </div>
+</div>

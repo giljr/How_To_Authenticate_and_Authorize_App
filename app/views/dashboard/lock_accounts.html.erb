@@ -1,0 +1,22 @@
+
+<div class="container">
+	    <h5>Locked Account List</h5>
+	    <table class="table table-striped" style="width:70%">
+	        <thead style="width:70%">
+	            <tr>
+	                <th>Email</th>
+	                <th>Username</th>
+	                <th>Action</th>
+	            </tr>
+	        </thead>
+	        <% @admins.each do |admin| %>
+	            <tr>
+	                <td><%= admin.email %></td>
+	                <td><%= admin.username %></td>
+	                <td>
+	                    <%= link_to 'Unlock', unlock_accounts_path(admin)  %>
+	                </td>
+	            </tr>
+	        <% end %>
+	    </table>
+	</div>

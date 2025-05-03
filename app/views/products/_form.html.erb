@@ -1,0 +1,23 @@
+<%= form_for @product do |f| %>
+	<div class="mb-2">
+        <span>Name: </span>
+        <%= f.text_field :name, required: true %>
+    </div>
+
+    <div class="mb-2">
+        <span>SKU: </span>
+        <%= f.text_field :sku, required: true %>
+    </div>
+
+    <div class="mb-2">
+        <span>Price: </span>
+        <%= f.number_field :price, required: true %>
+    </div>
+
+    <div class="mb-2">
+        <%= f.submit (f.object.new_record? ? 'Create Product' : 'Update Product') %>
+    </div>
+<% end %>
+<div class="mb-2">
+    <%= link_to 'Back to Product list', products_path %>
+</div>

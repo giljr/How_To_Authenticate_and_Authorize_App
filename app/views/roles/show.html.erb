@@ -1,0 +1,10 @@
+<h1>Role Details</h1>
+
+<% if @role %>
+  <p><strong>Name:</strong> <%= @role.name %></p>
+  <%= link_to 'Edit', edit_role_path(@role) %> |
+<% else %>
+  <p>Role not found.</p>
+<% end %>
+
+<%= link_to 'Back to Roles', roles_path %>

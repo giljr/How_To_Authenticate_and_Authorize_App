@@ -1,0 +1,24 @@
+<h2>Create New Role</h2>
+
+<% if @role.errors.any? %>
+  <div class="alert alert-danger">
+    <h4><%= pluralize(@role.errors.count, "error") %> prohibited this role from being saved:</h4>
+    <ul>
+      <% @role.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_for @role do |f| %>
+  <div class="mb-2">
+    <%= f.label :name, "Role Name:" %>
+    <%= f.text_field :name, required: true, class: "form-control" %>
+  </div>
+
+  <div class="d-flex gap-2 mb-2">
+    <%= f.submit 'Create Role', class: "btn btn-primary" %>
+    <%= link_to 'Back to Role list', roles_path, class: "btn btn-secondary" %>
+  </div>
+<% end %>

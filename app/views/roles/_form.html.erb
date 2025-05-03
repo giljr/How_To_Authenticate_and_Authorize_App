@@ -1,0 +1,13 @@
+<%= form_with model: @role, class: "my-form", data: { turbo_frame: "_top" } do |f| %>
+	<div class="mb-2">
+        <span>Role Name: </span>
+        <%= f.text_field :name, required: true %>
+    </div>
+
+    <div class="mb-2">
+        <%= f.submit 'Create Role' %>
+    </div>
+<% end %>
+<div class="mb-2">
+    <%= link_to 'Back to Role list', roles_path %>
+</div>

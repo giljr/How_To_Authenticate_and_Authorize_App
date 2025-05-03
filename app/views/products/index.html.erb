@@ -1,0 +1,38 @@
+<div class="container">
+  <h5>Product List</h5>
+  <table class="table table-striped" style="width:70%">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>SKU</th>
+        <th>Price</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @products.each do |product| %>
+        <tr>
+          <td><%= product.name %></td>
+          <td><%= product.sku %></td>
+          <td><%= number_to_currency(product.price) %></td>
+          <td>
+            <div class="d-flex">
+              <% if is_authorize(current_admin, ProductPermissions::EDIT_PRODUCT) %>
+                <%= link_to 'Edit', edit_product_path(product), class: 'btn btn-sm btn-outline-primary me-2' %>
+              <% end %>
+
+              <% if is_authorize(current_admin, ProductPermissions::DELETE_PRODUCT) %>
+                <%= button_to 'Delete', product_path(product), data: { turbo_confirm: 'Are you sure you want to delete this product?' }, method: :delete, class: 'btn btn-sm btn-outline-danger' %>
+              <% end %>
+            </div>
+          </td>
+
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <% if is_authorize(current_admin, ProductPermissions::ADD_PRODUCT) %>
+    <p><%= link_to 'Create Product', new_product_path, class: 'btn btn-primary' %></p>
+  <% end %>
+</div>

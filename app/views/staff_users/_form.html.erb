@@ -1,0 +1,48 @@
+
+<% staff_url = @staff_user.new_record? ? staff_users_path : staff_user_path(@staff_user) %>
+<% method_type = @staff_user.new_record? ? 'post' : 'put' %>
+
+<%= form_for :staff_user, url: staff_url, method: method_type.to_sym do |f| %>
+	<div class="mb-2">
+        <span>Username: </span>
+        <%= f.text_field :username, required: true %>
+    </div>
+
+    <div class="mb-2">
+        <span>First name: </span>
+        <%= f.text_field :first_name, required: true %>
+    </div>
+
+    <div class="mb-2">
+        <span>Last name: </span>
+        <%= f.text_field :last_name, required: true %>
+    </div>
+
+    <div class="mb-2">
+        <span>Email: </span>
+        <%= f.email_field :email, required: true %>
+    </div>
+
+    <div class="mb-2">
+        <span>Password: </span>
+        <%= f.password_field :password, required: true %>
+    </div>
+
+    <div class="mb-2">
+        <span>Password Confirmation: </span>
+        <%= f.password_field :password_confirmation, required: true %>
+    </div>
+
+    <div class="mb-2">
+        <span>Role: </span>
+        <%= f.select :role_id, options_for_select(@roles, @staff_user.role_id) %>
+    </div>
+
+    <div class="mb-2">
+        <%= f.submit "#{@staff_user.new_record? ? 'Create' : 'Update' } Staff User" %>
+    </div>
+
+<% end %>
+<div class="mb-2">
+    <%= link_to 'Back to staff user list', staff_users_path %>
+</div>

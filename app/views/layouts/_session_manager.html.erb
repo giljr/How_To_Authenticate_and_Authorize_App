@@ -1,0 +1,8 @@
+<form class="form-inline">
+  <% if admin_signed_in? %>
+    <%= link_to "Sign Out", destroy_admin_session_path, data: { turbo_method: :delete }, class: "btn btn-outline-danger" %>
+  <% else %>
+    <%= link_to "Sign In", new_admin_session_path, class: "btn btn-outline-success" %>
+    <%= link_to "sign Up", new_admin_registration_path, class: "btn btn-outline-success" %>
+  <% end %>
+</form>

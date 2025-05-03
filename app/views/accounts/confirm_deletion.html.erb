@@ -1,0 +1,9 @@
+<div class="container mt-5">
+  <h3>Confirm Account Deletion</h3>
+  <p class="text-danger">Are you sure you want to delete your account? This action cannot be undone.</p>
+
+  <%= form_with url: delete_account_path, method: :delete do %>
+    <%= submit_tag "Yes, delete my account", class: "btn btn-danger me-2" %>
+    <%= link_to "Cancel", root_path, class: "btn btn-secondary" %>
+  <% end %>
+</div>

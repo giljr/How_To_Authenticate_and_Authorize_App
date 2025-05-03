@@ -1,0 +1,9 @@
+<nav class="navbar navbar-light bg-light justify-content-between">
+        <h5 class="navbar-brand">Authentication Demo</h5>
+            <%= link_to "Home", root_path %>
+        </h5>
+        <% if admin_signed_in? %>
+          <a class= "navbar-brand margin-left">Welcome <%= current_admin.username %></a>
+        <% end %>
+        <%= render 'layouts/session_manager' %>
+</nav>

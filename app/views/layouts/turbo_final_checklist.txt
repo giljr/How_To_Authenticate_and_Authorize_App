@@ -1,0 +1,6 @@
+🔎 Final Checklist
+Thing	Should be
+    link_to	data: { turbo_method: :delete }
+    Turbo loaded?	Yes – import "@hotwired/turbo-rails" in application.js (You do not need @rails/ujs in Rails 8)
+    Link rendered correctly?	<a data-turbo-method="delete">
+    javascript_importmap_tags in layout?	✅

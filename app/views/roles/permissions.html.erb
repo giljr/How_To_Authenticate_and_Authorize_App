@@ -1,0 +1,16 @@
+<div class="container">  
+  <h5>Associate Permissions to Role</h5>
+
+  <%= form_for :permission, url: store_permissions_url(@role), method: :post do |f| %>
+    <% @permissions.each do |permission| %>
+      <div class="form-check">
+        <%= check_box_tag "permission_ids[]", permission.id, @select_permission_ids.include?(permission.id), id: "permission_#{permission.id}" %>
+        <%= label_tag "permission_#{permission.id}", permission.name, class: "form-check-label" %>
+      </div>
+    <% end %>
+
+    <div class="form-group mt-3">
+      <%= f.submit "Associate Permissions", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>
