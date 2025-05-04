@@ -1,0 +1,241 @@
+✅ Pure Terminal
+
+mkdir auth
+cd auth/
+new authenticationdemo
+rails new authenticationdemo
+cd authenticationdemo/
+code .
+rails g scaffold Task title:string content:text status:integer
+rails db:migrate
+bin/dev
+rails c
+bin/dev
+rails db:seed
+rails db:drop
+rails db:migrate
+rails db:seed
+rails c
+rails db:drop
+rails db:migrate
+rails db:seed
+rails db:drop
+rails db:migrate
+rails db:seed
+rails c
+clear
+Task.human_enum_name(:status, :pending)
+clear
+I18n.t("activerecord.attributes.task.status.pending")
+rails c
+task.human_status
+rails c
+clear
+rails routes info
+rails routes info | grep admin
+rails db:drop
+rails db:migrate
+rails db:seed
+rails db:schema:dump
+clear
+rails routes | grep admin
+rails s
+bin/dev
+clear
+rails routes info | grep sign
+clear
+bin/rails routes | grep admin
+rails c
+bundle install
+rails g devise:install
+clear
+rails g model role name:string
+rails db:migrate
+clear
+rails db:seed
+clear
+rails g controller roles
+clear
+rails g devise admin
+clear
+rails g migration AddRoleToAdmin
+rails db:migrate
+clear
+rails db:migrate
+clea
+clear
+rails db:migrate
+rails db:seed
+clear
+rails db:seed
+rails g devise:controllers admins
+clear
+rails g devise:views admins
+clear
+rails g controller customers
+rails g controller staffusers
+rails d controller staffusers
+rails d controller staffUsers
+rails g controller staffUsers
+clear
+rails g controller dashboard
+clear
+rails s
+clear
+rails routes info | grep sign
+bin/dev
+bundle install
+bin/dev
+bundle install
+bin/dev
+rails g model permission name:string
+rails g model permission_role role:references permission:references
+rails db:migrate
+rails db:seed
+bin/dev
+clear
+rails g pundit:install
+clear
+rails g model product name:string price:float sku:string
+rails db:migrate
+cls
+clear
+rails g pundit:policy product
+clear
+rails g controller products index new create edit update destroy
+bin/dev
+clear
+bin/dev
+clear
+rails g migration addTrackableAndLockableColumnsToAdmin
+rails db:migrate
+clear
+bin/dev
+clear
+bin/dev
+rails generate controller Accounts
+bin/dev
+rails db:drop
+rails db:migrate
+bin/dev
+rails db:seed
+bin/dev
+rails db:drop
+rails db:migrate
+rails db:seed
+bin/dev
+rails db:drop
+rails db:migrate
+rails db:seed
+bin/dev
+clear
+git remote add origin git@github.com:giljr/How_To_Authenticate_and_Authorize_App.git
+git branch -M master
+git add . 
+git commit -m "first commit"
+git push -u origin master
+git tag -a v0.0.1 -m "Initial project setup with Devise and Pundit"
+git push origin v0.0.1
+git add .
+git commit -m "upload readme file"
+git push -u origin master
+cd Documents/
+cd rails_projects/
+ls
+cd auth/
+clear
+rails new authdemo
+clear
+cd authdemo/
+code .
+
+-------------------------------------
+
+✅ 1. Project Setup
+
+mkdir auth
+cd auth
+rails new authenticationdemo
+cd authenticationdemo
+code .
+
+✅ 2. Generate Initial Scaffold and Migrate DB
+
+rails g scaffold Task title:string content:text status:integer
+rails db:migrate
+
+✅ 3. Run the App and Test Console
+
+bin/dev
+rails c
+Task.human_enum_name(:status, :pending)
+I18n.t("activerecord.attributes.task.status.pending")
+
+✅ 4. Add Devise for Authentication
+
+bundle install
+rails g devise:install
+rails g devise Admin
+rails db:migrate
+
+✅ 5. Customize Devise (Optional)
+
+rails g devise:controllers admins
+rails g devise:views admins
+
+✅ 6. Add Roles and Permissions Models
+
+rails g model Role name:string
+rails g model Permission name:string
+rails g model PermissionRole role:references permission:references
+rails db:migrate
+
+✅ Seed and Verify DB
+
+rails db:seed
+rails c
+
+✅ Add Role Association to Admin
+
+rails g migration AddRoleToAdmin role:references
+rails db:migrate
+
+✅ Generate Necessary Controllers
+
+rails g controller Roles
+rails g controller Customers
+rails g controller StaffUsers
+rails g controller Dashboard
+rails g controller Products index new create edit update destroy
+rails g controller Accounts
+
+✅ Install and Setup Pundit for Authorization
+
+rails g pundit:install
+rails g pundit:policy product
+
+✅ Enhance Devise Admin Model (Trackable & Lockable)
+
+rails g migration addTrackableAndLockableColumnsToAdmin
+rails db:migrate
+
+✅ Final Dev Cycle & Dev Server
+
+bin/dev
+rails s
+rails routes | grep admin
+rails routes | grep sign
+
+✅ Version Control & GitHub Deployment
+
+git remote add origin git@github.com:giljr/How_To_Authenticate_and_Authorize_App.git
+git branch -M master
+git add .
+git commit -m "first commit"
+git push -u origin master
+git tag -a v0.0.1 -m "Initial project setup with Devise and Pundit"
+git push origin v0.0.1
+git add .
+git commit -m "upload readme file"
+git push -u origin master
+
