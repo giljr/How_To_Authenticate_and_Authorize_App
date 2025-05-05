@@ -1,4 +1,3 @@
-
 # Rails 8 Project:
 ## Authentication with Devise & Authorization with Pundit
 
@@ -8,20 +7,21 @@ For fine-grained access control, Pundit is used to implement role-based authoriz
 
 Together, Devise and Pundit ensure the application is both securely authenticated and properly authorized, providing a solid foundation for managing user access.
 
-This project is a complete implementation based on the Udemy course:
+This project is a complete implementation based on the Udemy course:  
 “Learn Rails 7, ActiveRecord ORM, ActiveJob, Turbo, Stimulus, APIs, Authentication, Authorization – From Scratch Step by Step” by Kameswara Sarma Uppuluri.
+
+## Screenshot
+
+![Pundit Role-Based Authorization Diagram](./public/pundit_diagram_v0.png)
 
 ## Acknowledgements
 
- - [Kameswara Sarma Uppuluri](https://sefinro.udemy.com/user/ksarma/)
-
+- [Kameswara Sarma Uppuluri](https://sefinro.udemy.com/user/ksarma/)
 
 ## Authors
 
 - [@jaythree](https://www.linkedin.com/in/giljrx/)
 
-
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
-
